@@ -1,8 +1,13 @@
-import model.*;
+package executor;
+
+import model.Task1;
+import model.Task2;
+import model.Task3;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Runner {
+public class ExecutorServiceRunner {
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newFixedThreadPool(2);
 //        add tasks to executor service
