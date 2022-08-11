@@ -1,4 +1,4 @@
-package concurrency;
+package concurrency.multithreadingWithSynchronized;
 
 public class ConcurrencyRunner {
     public static void main(String[] args) throws InterruptedException {
