@@ -10,7 +10,7 @@ public class Counter {
         return i;
     }
 
-    public void setI(int i) {
-        this.i = i;
-    }
+     public void setI(int i) {
+         this.i = i;
+     }
 }
