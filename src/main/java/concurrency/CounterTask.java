@@ -14,9 +14,13 @@ public class CounterTask extends Thread {
     }
 
     @Override
-    public void run() {
-        System.out.println(Thread.currentThread().getName() + " reads value - " + counter.getI());
-        counter.increment(incValue);
-        System.out.println(Thread.currentThread().getName() + " sets value - " + counter.getI());
+    synchronized public void run() {
+        System.out.println("Thread Entered - " + Thread.currentThread().getName());
+        int temp = counter.getI();
+        System.out.println(Thread.currentThread().getName() + " - get value - " + temp);
+        temp++;
+        counter.setI(temp);
+        System.out.println(Thread.currentThread().getName() + " - set value - " + temp);
+        System.out.println("Thread died - " + Thread.currentThread().getName());
     }
 }
